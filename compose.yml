@@ -14,23 +14,23 @@ services:
     deploy:
       replicas: 4
 
-   book_service:
+  book_service:
     image: bookimage
     ports:
       - "5002:5002"
     deploy:
       replicas: 4
 
-   borrow_service:
+  borrow_service:
     image: borrowimage
     ports:
       - "5003:5003"
     deploy:
       replicas: 4
 
-   frontend:
+  frontend:
     image: frontendimage
     ports:
       - "5000:5000"
-   deploy:
-     replicas: 4
+    deploy:
+      replicas: 4
