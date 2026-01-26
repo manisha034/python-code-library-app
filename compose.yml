@@ -5,32 +5,32 @@ services:
     ports:
       - "3306:3306"
     deploy:
-      replicas: 4
+      replicas: 1
 
   auth_service:
     image: manisha03b/pythonapp:authimage
     ports:
       - "5001:5001"
     deploy:
-      replicas: 4
+      replicas: 1
 
   book_service:
     image: manisha03b/pythonapp:bookimage
     ports:
       - "5002:5002"
     deploy:
-      replicas: 4
+      replicas: 1
 
   borrow_service:
     image: manisha03b/pythonapp:borrowimage
     ports:
       - "5003:5003"
     deploy:
-      replicas: 4
+      replicas: 1
 
   frontend:
     image: manisha03b/pythonapp:frontendimage
     ports:
       - "5000:5000"
     deploy:
-      replicas: 4
+      replicas: 1
