@@ -1,14 +1,14 @@
 ---
 services:
   db:
-    image: manisha03b/flm2026:dbimage
+    image: manisha03b/pythonapp:dbimage
     ports:
       - "3306:3306"
     deploy:
       replicas: 1
 
   auth_service:
-    image: manisha03b/flm2026:authimage
+    image: manisha03b/pythonapp:authimage
     ports:
       - "5001:5001"
     deploy:
@@ -17,7 +17,7 @@ services:
       - db
 
   book_service:
-    image: manisha03b/flm2026:bookimage
+    image: manisha03b/pythonapp:bookimage
     ports:
       - "5002:5002"
     deploy:
@@ -26,7 +26,7 @@ services:
       - db
 
   borrow_service:
-    image: manisha03b/flm2026:borrowimage
+    image: manisha03b/pythonapp:borrowimage
     ports:
       - "5003:5003"
     deploy:
@@ -35,7 +35,7 @@ services:
       - db
 
   frontend:
-    image: manisha03b/flm2026:appimage
+    image: manisha03b/pythonapp:appimage
     ports:
       - "5000:5000"
     deploy:
