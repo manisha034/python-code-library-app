@@ -7,7 +7,7 @@ services:
     deploy:
       replicas: 1
 
-  auth_service:
+  auth-service:
     image: manisha03b/pythonapp:authimage
     ports:
       - "5001:5001"
@@ -16,7 +16,7 @@ services:
     depends_on:
       - db
 
-  book_service:
+  book-service:
     image: manisha03b/pythonapp:bookimage
     ports:
       - "5002:5002"
@@ -25,7 +25,7 @@ services:
     depends_on:
       - db
 
-  borrow_service:
+  borrow-service:
     image: manisha03b/pythonapp:borrowimage
     ports:
       - "5003:5003"
